@@ -1,992 +1,503 @@
 <!DOCTYPE html>
-<html >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.9.13, a.mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/photo-1580584126903-c17d41830450.jpeg" type="image/x-icon">
-  <meta name="description" content="Join our Robotics Club for kids and dive into the world of programming, electronics, and robot building. Have fun while developing valuable STEM skills!">
-  <title>Fun Robotics Learning</title>
-  <link rel="stylesheet" href="https://r.mobirisesite.com/414026/assets/web/assets/mobirise-icons2/mobirise2.css?rnd=1714393788981">
-  <link rel="stylesheet" href="https://r.mobirisesite.com/414026/assets/bootstrap/css/bootstrap.min.css?rnd=1714393788981">
-  <link rel="stylesheet" href="https://r.mobirisesite.com/414026/assets/bootstrap/css/bootstrap-grid.min.css?rnd=1714393788981">
-  <link rel="stylesheet" href="https://r.mobirisesite.com/414026/assets/bootstrap/css/bootstrap-reboot.min.css?rnd=1714393788981">
-  <link rel="stylesheet" href="https://r.mobirisesite.com/414026/assets/dropdown/css/style.css?rnd=1714393788981">
-  <link rel="stylesheet" href="https://r.mobirisesite.com/414026/assets/socicon/css/styles.css?rnd=1714393788981">
-  <link rel="stylesheet" href="https://r.mobirisesite.com/414026/assets/theme/css/style.css?rnd=1714393788981">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&display=swap&display=swap"></noscript>
-  <link rel="stylesheet" href="https://r.mobirisesite.com/414026/assets/css/mbr-additional.css?rnd=1714393788981" type="text/css">
-  
-  
-  
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Hardik Mandani | Embedded Systems Engineer | CPEng, NER, RPEV, RPEQ</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fbfdfe;
+            color: #111827;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        /* Color theme variables - accessibility friendly */
+        body.theme-default {
+            --primary: #0f6b7c;
+            --primary-dark: #0a4e5c;
+            --primary-light: #e0f2fe;
+            --bg-light: #fbfdfe;
+            --card-bg: white;
+            --text-dark: #111827;
+            --text-muted: #334155;
+            --border-light: #eef2f6;
+        }
+        body.theme-protanopia {
+            --primary: #2c6e9e;
+            --primary-dark: #1f4e72;
+            --primary-light: #d4e6f1;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #1e2a3a;
+            --text-muted: #2c3e50;
+            --border-light: #e2e8f0;
+        }
+        body.theme-deuteranopia {
+            --primary: #4a7c59;
+            --primary-dark: #2d5a3b;
+            --primary-light: #e0f0e2;
+            --bg-light: #f9fbf7;
+            --card-bg: #ffffff;
+            --text-dark: #1e2a1f;
+            --text-muted: #2d3e2c;
+            --border-light: #e2ebe0;
+        }
+        body.theme-tritanopia {
+            --primary: #b56576;
+            --primary-dark: #8e4a5c;
+            --primary-light: #fbe9ef;
+            --bg-light: #fdfafb;
+            --card-bg: #ffffff;
+            --text-dark: #2d1f24;
+            --text-muted: #5a3e46;
+            --border-light: #f0e6e9;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(4px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-light);
+            padding: 16px 0;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.7rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .logo-icon {
+            background: var(--primary);
+            width: 36px;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            color: white;
+            font-size: 1.2rem;
+            margin-right: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .section:last-of-type {
+            border-bottom: none;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            color: var(--text-dark);
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        .hero {
+            padding: 60px 0 40px;
+            background: linear-gradient(145deg, var(--bg-light) 0%, #ffffff 100%);
+        }
+        .hero-badge {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .hero-content h1 { font-size: 3rem; font-weight: 800; color: var(--text-dark); }
+        .hero-tagline { font-size: 1.4rem; font-weight: 500; color: var(--primary); margin-bottom: 20px; }
+        .hero-desc { color: var(--text-muted); max-width: 600px; margin-bottom: 28px; }
+
+        .theme-switcher {
+            display: flex;
+            gap: 12px;
+            margin-left: 20px;
+        }
+        .theme-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: 0.1s;
+        }
+        .theme-btn.active { border-color: #000; transform: scale(1.1); }
+        .theme-default-btn { background-color: #0f6b7c; }
+        .theme-protanopia-btn { background-color: #2c6e9e; }
+        .theme-deuteranopia-btn { background-color: #4a7c59; }
+        .theme-tritanopia-btn { background-color: #b56576; }
+
+        /* Portfolio Card Style - simple & clean */
+        .portfolio-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            border: 1px solid var(--border-light);
+            margin-bottom: 24px;
+            overflow: hidden;
+            transition: 0.2s ease;
+        }
+        .portfolio-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px -12px rgba(0,0,0,0.08);
+            border-color: var(--primary);
+        }
+        .portfolio-header {
+            padding: 1.2rem 1.5rem 0.6rem;
+            background: var(--bg-light);
+        }
+        .portfolio-title { font-size: 1.25rem; font-weight: 700; color: var(--primary-dark); }
+        .portfolio-role { font-size: 0.75rem; font-weight: 600; color: var(--primary); margin: 4px 0 2px; }
+        .portfolio-client { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px; }
+        .portfolio-body { padding: 0.8rem 1.5rem 1.2rem; }
+        .achievement-list { list-style: none; margin: 6px 0 0; }
+        .achievement-list li { font-size: 0.85rem; margin-bottom: 8px; padding-left: 1.2rem; position: relative; color: var(--text-muted); }
+        .achievement-list li::before { content: "▹"; position: absolute; left: 0; color: var(--primary); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            gap: 24px;
+        }
+        .service-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 24px 16px;
+            border: 1px solid var(--border-light);
+            text-align: center;
+            transition: 0.2s;
+        }
+        .service-card:hover { transform: translateY(-4px); border-color: var(--primary); }
+        .service-icon { background: var(--primary-light); width: 56px; height: 56px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; border-radius: 28px; color: var(--primary); font-size: 1.5rem; }
+
+        .magic-motto { margin-top: 20px; font-weight: 500; color: var(--primary); background: var(--primary-light); display: inline-block; padding: 6px 18px; border-radius: 40px; font-size: 0.9rem; }
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); backdrop-filter: blur(4px); }
+        .modal-content { background: var(--card-bg); margin: 4% auto; padding: 20px; width: 85%; max-width: 900px; border-radius: 32px; height: 85%; display: flex; flex-direction: column; }
+        .close-modal { font-size: 32px; cursor: pointer; align-self: flex-end; }
+        iframe { width: 100%; height: 100%; border: none; border-radius: 20px; }
+        .form-control { width: 100%; padding: 14px 18px; border-radius: 60px; border: 1px solid var(--border-light); font-family: 'Inter', sans-serif; background: var(--card-bg); }
+        textarea.form-control { border-radius: 28px; }
+        .alert-message { padding: 12px 16px; border-radius: 60px; margin-top: 16px; animation: fadeInUp 0.4s ease; }
+        .alert-success { background: #dcfce7; color: #15803d; }
+        .alert-error { background: #fee2e2; color: #b91c1c; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @media (max-width: 800px) { .container { padding: 0 20px; } .portfolio-header { padding: 1rem; } .nav-flex { flex-direction: column; gap: 16px; } }
+        .counter { font-weight: 800; font-size: 1.2rem; color: var(--primary); }
+        .clickable-link { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .clickable-link:hover { text-decoration: underline; }
+        .expertise-list { margin-top: 30px; background: var(--card-bg); border-radius: 24px; padding: 20px; border-left: 4px solid var(--primary); }
+        .expertise-item { display: flex; align-items: center; gap: 12px; padding: 8px 0; }
+        .summary-box { background: var(--primary-light); padding: 20px; border-radius: 24px; margin-top: 28px; }
+    </style>
 </head>
-<body>
- 
-<!--    
-  <section data-bs-version="5.1" class="menu menu2 cid-ubkUClNX2n" once="menu" id="menu-5-ubkUClNX2n">
-	
+<body class="theme-default">
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <div class="logo"><div class="logo-icon"><i class="fas fa-microchip"></i></div><span>HARDIK</span><span> MANDANI</span></div>
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="theme-switcher">
+                    <div class="theme-btn theme-default-btn active" data-theme="default" title="Default"></div>
+                    <div class="theme-btn theme-protanopia-btn" data-theme="protanopia" title="Protanopia"></div>
+                    <div class="theme-btn theme-deuteranopia-btn" data-theme="deuteranopia" title="Deuteranopia"></div>
+                    <div class="theme-btn theme-tritanopia-btn" data-theme="tritanopia" title="Tritanopia"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-	<nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-		<div class="container">
-			<div class="navbar-brand">
-				<span class="navbar-logo">
-					<a href="https://mobiri.se">
-						<img src="assets/images/photo-1580584126903-c17d41830450.jpeg" alt="Mobirise Website Builder" style="height: 4.3rem;">
-					</a>
-				</span>
-				<span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4" href="https://mobiri.se">Robotics Club</a></span>
-			</div>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-				<div class="hamburger">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-					<li class="nav-item">
-						<a class="nav-link link text-black display-4" href="https://mobiri.se">About</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link link text-black display-4" href="https://mobiri.se" aria-expanded="false">Gallery</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link link text-black display-4" href="https://mobiri.se">FAQ</a>
-					</li>
-				</ul>
-				
-				<div class="navbar-buttons mbr-section-btn">
-					<a class="btn btn-primary display-4" href="https://mobiri.se">Join Now</a>
-				</div>
-			</div>
-		</div>
-	</nav>
-</section>
--->
-<section data-bs-version="5.1" class="header18 cid-ubkUClOOTN mbr-fullscreen" data-bg-video="https://www.youtube.com/embed/ThRYF96HIzA?autoplay=1&amp;loop=1&amp;playlist=ThRYF96HIzA&amp;t=20&amp;mute=1&amp;playsinline=1&amp;controls=0&amp;showinfo=0&amp;autohide=1&amp;allowfullscreen=true&amp;mode=transparent" id="hero-16-ubkUClOOTN">
-  
+    <main>
+        <section id="home" class="hero">
+            <div class="container" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+                <div style="flex:1">
+                    <div class="hero-badge"><i class="fas fa-microchip"></i> CPEng | NER | RPEV | RPEQ | APEC Engineer | IntPE(Aus) | MIEAust</div>
+                    <h1>Hardik Mandani</h1>
+                    <div class="hero-tagline">Embedded Systems Engineer | Electronics & Telecommunications</div>
+                    <p class="hero-desc">Chartered Engineer with 9+ years of experience in full-lifecycle hardware development, IoT integration, and cross-functional project delivery. Proven track record optimizing manufacturing efficiency and reducing failure rates for global rail and industrial clients.</p>
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <a href="#contact" class="btn-primary">Get in touch</a>
+                        <a href="#portfolio" style="text-decoration: none; border: 1px solid var(--primary); padding: 10px 24px; border-radius: 40px; font-weight:500; color: var(--primary);">View projects</a>
+                        <button id="openResumeBtn" class="btn-primary resume-btn" style="background:transparent; border:2px solid var(--primary); color:var(--primary);">📄 Resume</button>
+                    </div>
+                    <div class="magic-motto"><i class="fas fa-rocket"></i> From prototype to production — engineering that works.</div>
+                </div>
+                <div style="flex: 0.4; text-align: center;"><i class="fas fa-microchip" style="font-size: 6rem; color: var(--primary); opacity:0.4;"></i></div>
+            </div>
+        </section>
 
-  <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(0, 0, 0);"></div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="content-wrap col-12 col-md-12">
-        <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1">
-          <strong>Robotics Club</strong>
-        </h1>
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 48px;">
+                    <div style="flex:1.5">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 16px;">Hardik Mandani <span style="color:var(--primary);">Embedded Systems Engineer</span></h3>
+                        <p style="margin-bottom: 20px;">Experienced in designing, developing, and deploying embedded systems across rail, IoT, and industrial automation. Skilled in hardware-software integration, cable harnessing, and compliance with safety standards. Comfortable managing project timelines, vendor relations, and cross-functional teams.</p>
+                        <div class="skill-tags" style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <span class="skill-tag" style="background:var(--primary-light); padding:6px 16px; border-radius:40px; font-size:0.85rem;">C/C++</span>
+                            <span class="skill-tag" style="background:var(--primary-light); padding:6px 16px; border-radius:40px; font-size:0.85rem;">Embedded C</span>
+                            <span class="skill-tag" style="background:var(--primary-light); padding:6px 16px; border-radius:40px; font-size:0.85rem;">STM32/ARM</span>
+                            <span class="skill-tag" style="background:var(--primary-light); padding:6px 16px; border-radius:40px; font-size:0.85rem;">Altium Designer</span>
+                            <span class="skill-tag" style="background:var(--primary-light); padding:6px 16px; border-radius:40px; font-size:0.85rem;">DFM</span>
+                            <span class="skill-tag" style="background:var(--primary-light); padding:6px 16px; border-radius:40px; font-size:0.85rem;">CAN/SPI/I2C</span>
+                        </div>
+                        <div class="expertise-list">
+                            <h4 style="margin-bottom:12px; color:var(--primary);"><i class="fas fa-chart-simple"></i> Key metrics</h4>
+                            <div class="expertise-item"><i class="fas fa-microchip" style="color:var(--primary); width:24px;"></i> <span class="counter" id="counterPcb">0</span>+ PCB layouts | 10+ product lines</div>
+                            <div class="expertise-item"><i class="fas fa-file-alt" style="color:var(--primary); width:24px;"></i> <span class="counter" id="counterDocs">0</span>+ technical documents & QMS reports</div>
+                            <div class="expertise-item"><i class="fas fa-charging-station" style="color:var(--primary); width:24px;"></i> Power efficiency gain: <span class="counter" id="counterPower">0</span>%</div>
+                            <div class="expertise-item"><i class="fas fa-chart-simple" style="color:var(--primary); width:24px;"></i> <span class="counter" id="counterIoc">0</span>+ IOCs deployed & supported</div>
+                        </div>
+                    </div>
+                    <div class="info-grid" style="flex:1; background:var(--card-bg); border-radius:24px; padding:28px; border:1px solid var(--border-light);">
+                        <div class="info-item" style="display:flex; align-items:center; gap:14px; margin-bottom:22px;"><div class="info-icon" style="background:var(--primary-light); width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center;"><i class="fas fa-graduation-cap"></i></div><div><strong>Degree</strong><br>M.Sc. Electrical & Electronics Engineering</div></div>
+                        <div class="info-item" style="display:flex; align-items:center; gap:14px; margin-bottom:22px;"><div class="info-icon" style="background:var(--primary-light); width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center;"><i class="fas fa-map-marker-alt"></i></div><div><strong>Location</strong><br>Melbourne / Clayton, Australia</div></div>
+                        <div class="info-item" style="display:flex; align-items:center; gap:14px; margin-bottom:22px;"><div class="info-icon" style="background:var(--primary-light); width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center;"><i class="fas fa-id-card"></i></div><div><strong>Credentials</strong><br>CPEng, NER, RPEV, RPEQ, APEC Engineer, IntPE(Aus), MIEAust</div></div>
+                        <div class="info-item" style="display:flex; align-items:center; gap:14px; margin-bottom:22px;"><div class="info-icon" style="background:var(--primary-light); width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center;"><i class="fas fa-trophy"></i></div><div><strong>Achievement</strong><br>Best Poster Award - extended IoT device battery life from 1 day to 1 year</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIMPLE PROJECT PORTFOLIO - only project name, role, customer, 2 achievements -->
+        <section id="portfolio" class="section">
+            <div class="container">
+                <h2 class="section-title">Project Portfolio</h2>
+                <div id="portfolioContainer"></div>
+                <div class="summary-box">
+                    <h3 style="color:var(--primary-dark); margin-bottom: 12px; font-size: 1.2rem;">📌 Areas of expertise</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                        <span style="background:var(--card-bg); padding:4px 14px; border-radius:30px; font-size:0.8rem;">IoT & embedded systems</span>
+                        <span style="background:var(--card-bg); padding:4px 14px; border-radius:30px; font-size:0.8rem;">PCB design (Altium)</span>
+                        <span style="background:var(--card-bg); padding:4px 14px; border-radius:30px; font-size:0.8rem;">Cable harnessing</span>
+                        <span style="background:var(--card-bg); padding:4px 14px; border-radius:30px; font-size:0.8rem;">Project management</span>
+                        <span style="background:var(--card-bg); padding:4px 14px; border-radius:30px; font-size:0.8rem;">Wireless protocols</span>
+                        <span style="background:var(--card-bg); padding:4px 14px; border-radius:30px; font-size:0.8rem;">Railway electronics</span>
+                        <span style="background:var(--card-bg); padding:4px 14px; border-radius:30px; font-size:0.8rem;">FAT/SAT & compliance</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION - mid-senior level tone -->
+        <section id="services" class="section">
+            <div class="container">
+                <h2 class="section-title">What I can help with</h2>
+                <div class="services-grid">
+                    <div class="service-card"><div class="service-icon"><i class="fas fa-microchip"></i></div><h3>Embedded hardware</h3><p>Schematic capture, PCB layout, firmware development, design for manufacturing.</p></div>
+                    <div class="service-card"><div class="service-icon"><i class="fas fa-plug"></i></div><h3>Cable & harness design</h3><p>Routing, integration, ruggedisation, and documentation for industrial environments.</div>
+                    <div class="service-card"><div class="service-icon"><i class="fas fa-chalkboard-user"></i></div><h3>Technical mentoring</h3><p>Upskilling teams in embedded C, RTOS, IoT architectures, and debugging.</p></div>
+                    <div class="service-card"><div class="service-icon"><i class="fas fa-chart-line"></i></div><h3>Project execution</h3><p>Timeline management, vendor coordination, cost estimation, site commissioning.</p></div>
+                    <div class="service-card"><div class="service-icon"><i class="fas fa-cloud-upload-alt"></i></div><h3>IoT & telemetry</h3><p>LoRa, NB-IoT, BLE, cellular, cloud logging, edge processing.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION - clean, no extra fluff -->
+        <section id="contact" class="section" style="border-bottom:none;">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+                    <div style="flex:1">
+                        <p style="font-size:1rem; margin-bottom: 20px;">Reach out for project inquiries, technical questions, or collaboration opportunities.</p>
+                        <div class="info-item"><div class="info-icon"><i class="fas fa-envelope"></i></div><div><strong>Email</strong><br><a href="mailto:hardikkumarmandani@gmail.com" class="clickable-link">hardikkumarmandani@gmail.com</a></div></div>
+                        <div class="info-item"><div class="info-icon"><i class="fab fa-linkedin"></i></div><div><strong>LinkedIn</strong><br><a href="https://linkedin.com/in/hardik-mandani" target="_blank" class="clickable-link">linkedin.com/in/hardik-mandani</a></div></div>
+                        <div class="info-item"><div class="info-icon"><i class="fas fa-phone-alt"></i></div><div><strong>Phone</strong><br><a href="tel:+61468474108" class="clickable-link">+61 468 474 108</a></div></div>
+                    </div>
+                    <div style="flex:1; background:var(--card-bg); border-radius:32px; padding:28px; border:1px solid var(--border-light);">
+                        <h3 style="margin-bottom: 16px;">Send a message</h3>
+                        <form id="contactForm">
+                            <div style="margin-bottom:1rem;"><input type="text" name="from_name" id="from_name" class="form-control" placeholder="Your name *" required></div>
+                            <div style="margin-bottom:1rem;"><input type="email" name="user_email" id="user_email" class="form-control" placeholder="Email address *" required></div>
+                            <div style="margin-bottom:1rem;"><input type="text" name="subject" id="subject" class="form-control" placeholder="Subject *" required></div>
+                            <div style="margin-bottom:1rem;"><textarea name="message" id="message" rows="4" class="form-control" placeholder="Tell me about your project or question..." required></textarea></div>
+                            <button type="submit" class="btn-primary" style="width:100%;" id="sendBtn">Send message <i class="fas fa-paper-plane"></i></button>
+                            <div id="formStatus"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer><div class="container"><p>© 2026 Hardik Mandani — CPEng, NER, RPEV, RPEQ</p><p style="font-size:0.8rem; margin-top:4px;">Electronics · Embedded Systems · Telecommunications</p></div></footer>
+
+    <div id="resumeModal" class="modal"><div class="modal-content"><span class="close-modal">&times;</span><h3>📄 Hardik Mandani - Resume</h3><iframe src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" title="Resume"></iframe><p style="margin-top:12px;">Full CV available upon request.</p></div></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Theme switcher
+        const themeBtns = document.querySelectorAll('.theme-btn');
+        themeBtns.forEach(btn => { btn.addEventListener('click', () => { const theme = btn.getAttribute('data-theme'); document.body.className = `theme-${theme}`; themeBtns.forEach(b => b.classList.remove('active')); btn.classList.add('active'); localStorage.setItem('preferredTheme', theme); }); });
+        const savedTheme = localStorage.getItem('preferredTheme'); if(savedTheme && savedTheme !== 'default') { document.body.className = `theme-${savedTheme}`; document.querySelector(`.theme-${savedTheme}-btn`).classList.add('active'); }
         
-        <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">Where Kids Dive into the Exciting World of Robotics, Programming, and Electronics to Build Awesome Robots!</p>
-        <!--<div class="mbr-section-btn">
-          <a class="btn btn-white-outline display-7" href="https://mobiri.se">Explore More</a>
-        </div> -->
-      </div>
-    </div>
-  </div>
-</section>
-
-<section data-bs-version="5.1" class="article9 cid-ubkUClOvCw" id="about-us-9-ubkUClOvCw">
-  
-
-  
-  
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="card col-md-12 col-lg-10">
-        <div class="card-wrapper">
-          <div class="card-content-text">
-            <h3 class="card-title mbr-fonts-style mbr-white mt-3 mb-4 display-2">
-            <strong>Who We Are</strong>
-          </h3>
-          <div class="row card-box align-left">
-            <div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                
-                <p class="mbr-text mbr-fonts-style display-7">Welcome to Robotics Club, the ultimate playground for young tech enthusiasts! We're all about sparking creativity, learning through play, and unleashing the genius in every child.</p>
-              </div>
-            </div>
-            <div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                
-                <p class="mbr-text mbr-fonts-style display-7">Join us for a rollercoaster ride of robot building, coding adventures, and mind-blowing STEM projects. Get ready to laugh, learn, and level up your skills in the coolest club in town!</p>
-              </div>
-            </div>
-            <div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                
-                <p class="mbr-text mbr-fonts-style display-7">At Robotics Club, we turn ordinary kids into extraordinary tech wizards. Let's revolutionize the future together, one robot at a time!</p>
-              </div>
-            </div>
-          </div>
-          </div>
-          <div class="image-wrapper d-flex justify-content-center mt-3">
-            <img src="assets/images/photo-1484740168222-9edf6e11cec3.jpeg" alt="Mobirise Website Builder">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section data-bs-version="5.1" class="gallery4 cid-ubkUClPf4D" id="gallery-12-ubkUClPf4D">
-  
-  
-  <div class="container-fluid gallery-wrapper">
-    <div class="row justify-content-center">
-      <div class="col-12 content-head">
+        // Animated counters
+        function animateCounter(id, target, suffix=''){ let el=document.getElementById(id); if(!el) return; let current=0; let step=target/60; let timer=setInterval(()=>{ current+=step; if(current>=target){ el.innerText=target+suffix; clearInterval(timer); } else el.innerText=Math.floor(current)+suffix; },20); }
+        const aboutSection = document.getElementById('about'); let animated=false; new IntersectionObserver((e)=>{ if(e[0].isIntersecting && !animated){ animated=true; animateCounter('counterPcb',100,''); animateCounter('counterDocs',50,''); animateCounter('counterPower',20,'%'); animateCounter('counterIoc',40,''); } },{threshold:0.4}).observe(aboutSection);
         
-      </div>
-    </div>
-    <div class="grid-container">
-      <div class="grid-container-1" style="transform: translate3d(-200px, 0px, 0px);">
-        <div class="grid-item">
-          <img src="assets/images/photo-1643199319409-84b7066f45b9.jpeg" alt="Mobirise Website Builder">
-        </div>
-        <div class="grid-item">
-          <img src="assets/images/photo-1639046380152-8603868f2e6a.jpeg" alt="Mobirise Website Builder">
-        </div>
-        <div class="grid-item">
-          <img src="assets/images/photo-1516110833967-0b5716ca1387.jpeg" alt="Mobirise Website Builder">
-        </div>
-        <div class="grid-item">
-          <img src="assets/images/photo-1535378917042-10a22c95931a.jpeg" alt="Mobirise Website Builder">
-        </div>
-      </div>
-      <div class="grid-container-2" style="transform: translate3d(-70px, 0px, 0px);">
-        <div class="grid-item">
-          <img src="assets/images/photo-1531747118685-ca8fa6e08806.jpeg" alt="Mobirise Website Builder">
-        </div>
-        <div class="grid-item">
-          <img src="assets/images/photo-1561144257-e32e8efc6c4f.jpeg" alt="Mobirise Website Builder">
-        </div>
-        <div class="grid-item">
-          <img src="assets/images/photo-1518314916381-77a37c2a49ae.jpeg" alt="Mobirise Website Builder">
-        </div>
-        <div class="grid-item">
-          <img src="assets/images/photo-1558137623-ce933996c730.jpeg" alt="Mobirise Website Builder">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section data-bs-version="5.1" class="list1 cid-ubkUClPH21" id="faq-1-ubkUClPH21">
-    
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-12 col-lg-10 m-auto">
-                <div class="content">
-                    <div class="row justify-content-center mb-5">
-                        <div class="col-12 content-head">
-                            <div class="mbr-section-head">
-                                <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                                    <strong>Got Questions? We've Got Answers!</strong>
-                                </h4>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div id="bootstrap-accordion_4" class="panel-group accordionStyles accordion" role="tablist" aria-multiselectable="true">
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingOne">
-                                <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse1_4" aria-expanded="false" aria-controls="collapse1">
-                                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">How can my child join Robotics Club?</h6>
-                                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                                </a>
-                            </div>
-                            <div id="collapse1_4" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_4">
-                                <div class="panel-body">
-                                    <p class="mbr-fonts-style panel-text display-7">To join Robotics Club, simply call +61 (0)468 474 108 and embark on an epic journey filled with robots, fun, and endless learning opportunities!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingOne">
-                                <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse1_4" aria-expanded="false" aria-controls="collapse1">
-                                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">Does Robotics Club include preparation for robotics competitions?</h6>
-                                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                                </a>
-                            </div>
-                            <div id="collapse1_4" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_4">
-                                <div class="panel-body">
-                                    <p class="mbr-fonts-style panel-text display-7">Yes, our tutoring program is designed to prepare students for robotics competitions. We provide tailored guidance, hands-on practice, and insights into competition requirements to ensure students are well-equipped to participate and excel.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingOne">
-                                <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse2_4" aria-expanded="false" aria-controls="collapse2">
-                                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">What age group is Robotics Club for?</h6>
-                                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                                </a>
-                            </div>
-                            <div id="collapse2_4" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_4">
-                                <div class="panel-body">
-                                    <p class="mbr-fonts-style panel-text display-7">Robotics Club is designed for kids aged over 7 who are passionate about electronics, robotics, programming, and all things tech. It's never too early to start building the future!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingOne">
-                                <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse3_4" aria-expanded="false" aria-controls="collapse3">
-                                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">Do kids need prior experience in robotics?</h6>
-                                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                                </a>
-                            </div>
-                            <div id="collapse3_4" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_4">
-                                <div class="panel-body">
-                                    <p class="mbr-fonts-style panel-text display-7">No prior experience is required! Our expert mentors will guide your child every step of the way, from assembling their first robot to mastering advanced coding concepts.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingOne">
-                                <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse4_4" aria-expanded="false" aria-controls="collapse4">
-                                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">Are the classes interactive and engaging?</h6>
-                                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                                </a>
-                            </div>
-                            <div id="collapse4_4" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_4">
-                                <div class="panel-body">
-                                    <p class="mbr-fonts-style panel-text display-7">Absolutely! Our classes are a whirlwind of excitement, challenges, and hands-on activities that will keep your child hooked and hungry for more tech adventures!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingOne">
-                                <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse5_4" aria-expanded="false" aria-controls="collapse5">
-                                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">What sets Robotics Club apart from other clubs?</h6>
-                                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                                </a>
-                            </div>
-                            <div id="collapse5_4" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_4">
-                                <div class="panel-body">
-                                    <p class="mbr-fonts-style panel-text display-7">Robotics Club isn't just a club; it's a tech revolution! We blend fun, learning, and innovation to create an electrifying experience that transforms kids into tech superheroes!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingOne">
-                                <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse6_4" aria-expanded="false" aria-controls="collapse5">
-                                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">Where is the Robotics Club located?</h6>
-                                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                                </a>
-                            </div>
-                            <div id="collapse6_4" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_4">
-                                <div class="panel-body">
-                                    <p class="mbr-fonts-style panel-text display-7">The robotics club is primarily located at Clayton, but we also offer in-house, remote, and online services for both schools and individuals.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="features023 cid-ubkUClPcdM" id="metrics-1-ubkUClPcdM">
-
-    
-
-    
-    
-    <div class="container">
+        // Modal
+        const modal = document.getElementById('resumeModal'); document.getElementById('openResumeBtn').onclick = () => modal.style.display='block'; document.querySelector('.close-modal').onclick = () => modal.style.display='none'; window.onclick = (e) => { if(e.target == modal) modal.style.display='none'; };
         
-        <div class="row content-row justify-content-center">
-            <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
-                <div class="item-wrapper">
-                    <div class="title mb-2 mb-md-3">
-                        <span class="num mbr-fonts-style display-1">
-                            <strong>Join the Robotics Revolution!</strong></span>
-                    </div>
-                    <h4 class="card-title mbr-fonts-style display-5">
-                        <strong>Unleash Creativity</strong>
-                    </h4>
-                    
-                </div>
-            </div>
-            <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
-                <div class="item-wrapper">
-                    <div class="title mb-2 mb-md-3">
-                        <span class="num mbr-fonts-style display-1">
-                            <strong>100% Fun Guaranteed!</strong></span>
-                    </div>
-                    <h4 class="card-title mbr-fonts-style display-5">
-                        <strong>Tech Wizards</strong>
-                    </h4>
-                    
-                </div>
-            </div>
-            <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
-                <div class="item-wrapper">
-                    <div class="title mb-2 mb-md-3">
-                        <span class="num mbr-fonts-style display-1">
-                            <strong>Unlock Your Potential!</strong></span>
-                    </div>
-                    <h4 class="card-title mbr-fonts-style display-5">
-                        <strong>Future Engineers</strong>
-                    </h4>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="header12 cid-ubkUClP9S0" id="call-to-action-8-ubkUClP9S0">
-    
-
-    
-    
-
-    <div class="text-center container">
-        <div class="row mb-4 justify-content-center">
-            <div class="col-12 col-md-4">
-                <img src="assets/images/photo-1553901767-12be7b9840e2.jpeg" alt="Mobirise Website Builder">
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-12 content-head">
-                <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
-                    <strong>Call us on 0468 474 108 to Join Us</strong>
-                </h1>
-                <p class="mbr-text mbr-fonts-style mb-4 display-7">Embark on a Journey of Innovation and Discovery with Our Robotics Club.</p>
-                <!--<div class="mbr-section-btn mt-4">
-                    <a class="btn btn-primary display-7" href="https://mobiri.se">Sign Up Now</a>
-                </div> -->
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="article15 cid-ubkUClQ66u" id="generic-text-15-ubkUClQ66u">
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md">
-                
-                <h6 class="mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-5">
-                    <strong>Welcome to the Ultimate Playground for Young Innovators and Tech Enthusiast!</strong>
-                </h6>
-            </div>
-            <div class="col-md-12 col-lg-6">
-                <p class="mbr-text mbr-fonts-style display-7">At our Robotics Club, kids dive into the exciting world of programming, electronics, and robot building.</p>
-                <p class="mbr-text mbr-fonts-style display-7">Experience the thrill of hands-on learning while having a blast with like-minded peers.</p>
-                <p class="mbr-text mbr-fonts-style display-7">Ignite your passion for STEM and watch your skills soar to new heights!</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="news08 cid-ubkUClQCpf" id="blog-2-ubkUClQCpf">
-    
-    
-    <div class="container-fluid">
-        <div class="row justify-content-center mb-5">
-            <div class="col-12 content-head">
-                <div class="mbr-section-head">
-                    <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                        <strong>Latest Adventures in Robotics</strong>
-                    </h4>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="item features-image col-12 col-md-6 col-lg-3 active">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="assets/images/photo-1643359905563-f747213c9703.jpeg" alt="Mobirise Website Builder" title="">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style mt-0 mb-3 display-7">Innovation</h5>
-                        <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
-                            <strong>The Future is Now</strong>
-                        </h6>
-                        <!--
-                        <div class="mbr-section-btn item-footer">
-                            <a href="" class="btn item-btn btn-primary display-7">Read</a>
-                        </div>-->
-                    </div>
-                </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="assets/images/photo-1581090121489-ff9b54bbee43.jpeg" alt="Mobirise Website Builder">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style mb-3 mt-0 display-7">Creativity</h5>
-                        <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
-                            <strong>Unleash Your Imagination</strong>
-                        </h6>
-                        <!--
-                        <div class="mbr-section-btn item-footer">
-                            <a href="" class="btn item-btn btn-primary display-7">Read</a>
-                        </div>-->
-                    </div>
-                </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="assets/images/photo-1531746790731-6c087fecd65a.jpeg" alt="Mobirise Website Builder">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style mb-3 mt-0 display-7">Discovery</h5>
-                        <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
-                            <strong>Exploring New Frontiers</strong>
-                        </h6>
-                        <!--
-                        <div class="mbr-section-btn item-footer">
-                            <a href="" class="btn item-btn btn-primary display-7">Read</a>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="assets/images/photo-1592085974642-7e1d8f7d31a5.jpeg" alt="Mobirise Website Builder">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style mb-3 mt-0 display-7">Tech</h5>
-                        <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
-                            <strong>Tech Talk: Behind the Scenes</strong>
-                        </h6>
-                        <!--
-                        <div class="mbr-section-btn item-footer">
-                            <a href="" class="btn item-btn btn-primary display-7">Read</a>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="people02 cid-ubkUClQ5Ng" id="testimonials-2-ubkUClQ5Ng">
-    
-
-    
-    
-    <div class="container">
-        <div class="row mb-5 justify-content-center">
-            <div class="col-12 content-head">
-                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2">
-                    <strong>Review</strong>
-                </h3>
-                
-            </div>
-        </div>
-        <div class="row">
-            <div class="item features-without-image col-12 col-md-6 col-lg-4 mb-5">
-                <div class="item-wrapper">
-                    <div class="card-box align-center">
-                        <div class="iconfont-wrapper mb-3">
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                        </div>
-                        <h5 class="card-title mbr-fonts-style mb-3 display-7">Mind-blowing experience! My child's creativity and problem-solving skills have skyrocketed since joining.</h5>
-                        <p class="card-text mbr-fonts-style mb-0 display-7">Proud Parent</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item features-without-image col-12 col-md-6 col-lg-4 mb-5">
-                <div class="item-wrapper">
-                    <div class="card-box align-center">
-                        <div class="iconfont-wrapper mb-3">
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                        </div>
-                        <h5 class="card-title mbr-fonts-style mb-3 display-7">Robotics Club is the highlight of my week! I've made friends and learned so much about technology.</h5>
-                        <p class="card-text mbr-fonts-style mb-0 display-7">Tech Enthusiast</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item features-without-image col-12 col-md-6 col-lg-4 mb-5">
-                <div class="item-wrapper">
-                    <div class="card-box align-center">
-                        <div class="iconfont-wrapper mb-3">
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                        </div>
-                        <h5 class="card-title mbr-fonts-style mb-3 display-7">Unforgettable memories and valuable skills gained. Thank you for making learning so much fun!</h5>
-                        <p class="card-text mbr-fonts-style mb-0 display-7">Happy Camper</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item features-without-image col-12 col-md-6 col-lg-4 mb-5">
-                <div class="item-wrapper">
-                    <div class="card-box align-center">
-                        <div class="iconfont-wrapper mb-3">
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                        </div>
-                        <h5 class="card-title mbr-fonts-style mb-3 display-7">A game-changer for my child's future. The confidence and knowledge acquired here are priceless!</h5>
-                        <p class="card-text mbr-fonts-style mb-0 display-7">Future Engineer</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item features-without-image col-12 col-md-6 col-lg-4 mb-5">
-                <div class="item-wrapper">
-                    <div class="card-box align-center">
-                        <div class="iconfont-wrapper mb-3">
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                        </div>
-                        <h5 class="card-title mbr-fonts-style mb-3 display-7">Robotics Club rocks! I never knew learning could be this exciting and engaging.</h5>
-                        <p class="card-text mbr-fonts-style mb-0 display-7">Curious Explorer</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item features-without-image col-12 col-md-6 col-lg-4 mb-5">
-                <div class="item-wrapper">
-                    <div class="card-box align-center">
-                        <div class="iconfont-wrapper mb-3">
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                            <span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-                        </div>
-                        <h5 class="card-title mbr-fonts-style mb-3 display-7">An electrifying journey into the world of robotics. My child is hooked and can't get enough!</h5>
-                        <p class="card-text mbr-fonts-style mb-0 display-7">Tech Fanatic</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-0 mt-md-5">
-            
-        </div>
-    </div>
-</section>
-<!--
-<section data-bs-version="5.1" class="video04 cid-ubkUClRJen" id="video-6-ubkUClRJen">
-  
-  
-  <div class="container">
-    <div class="mbr-section-head mb-5">
-      <h4 class="mbr-section-title mbr-fonts-style mb-0 mt-0 display-2">
-        <strong>Robotics Club Fun Zone</strong>
-      </h4>
-      
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-10 video-block">
-        <div class="video-wrapper"><iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/D-FzkUJb5n0?rel=0&amp;amp;mute=1&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;playlist=D-FzkUJb5n0" width="1280" height="720" frameborder="0" allowfullscreen></iframe></div>
+        // Project data - each has title, role, client, and exactly 2 achievements
+        const projects = [
+            { title:"Next Generation Instrumented Revenue Vehicle (IRV)", role:"Senior Electrical Engineer", client:"Rio Tinto Group, Australia", achievements:["Integrated IoT sensors with FPGA-based data logger for real-time track monitoring.","Designed cable harnessing & CAD documentation; led FAT/SAT and root-cause analysis."] },
+            { title:"Manufacturing & Installation — IRV Systems", role:"Senior Electrical Engineer", client:"Rio Tinto, Fortescue, Queensland Rail, Roy Hill", achievements:["Reduced manufacturing time by 30% and device failure rate by 20% via design improvements.","Coordinated site trials, vendor collaboration, and cost estimation."] },
+            { title:"Next-Gen Health & Safety Monitoring Prototype", role:"Senior Engineer / Project Supervisor", client:"Rio Tinto Group (internal)", achievements:["Developed predictive maintenance algorithms for safety-critical IRV systems.","Prototype approved for installation in Next-Gen IRV fleet."] },
+            { title:"Machine Vision Ballast Condition Monitoring", role:"Electrical System Design Engineer", client:"Mass Transit Railway (MTR), Hong Kong", achievements:["Managed cable harnessing and cross-functional integration for vision system.","Used CAD tools for system design and deployment coordination."] },
+            { title:"Rail Wheel & Track Temperature Monitoring", role:"Electrical System Design Engineer", client:"Fortescue Metals Group, Australia", achievements:["Programmed wireless temperature monitoring system with cloud-based logging.","Conducted field trials and system optimization, improving data reliability."] },
+            { title:"Wireless Automatic Meat Product Counter", role:"Electronics & IoT Engineer", client:"Australian Meat Processor Corporation", achievements:["Developed low-cost RFID counting mechanism with 99.8% accuracy.","Ensured compliance with food safety standards."] },
+            { title:"Wireless Milk Temperature Measurement Unit", role:"Hardware Design Engineer", client:"Bega Cheese, Australia", achievements:["Designed low-power NB-IoT/BLE sensor module for dairy farm deployment.","Conducted validation testing across 20+ farm locations."] },
+            { title:"IoT Building Access Controller", role:"Electronics & IoT Engineer", client:"NIDAC Security, Australia", achievements:["Implemented RFID-based access control with remote IoT monitoring.","Managed cable harnessing and system layout using CAD tools."] },
+            { title:"Wireless Fuel Tank Temperature Monitoring", role:"IoT Engineer", client:"LOB, Australia", achievements:["Developed LoRa-based wireless sensing with battery optimization.","Conducted field testing for harsh environment reliability."] }
+        ];
         
-      </div>
-    </div>
-  </div>
-</section>
--->
-<section data-bs-version="5.1" class="features03 cid-ubkUClRWH1" id="features-8-ubkUClRWH1">
-	
-	
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 content-head">
-                
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="item features-image col-12 col-md-6 col-lg-4 active">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="assets/images/photo-1581092335878-2d9ff86ca2bf.jpeg" alt="Mobirise Website Builder" title="">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style mt-0 mb-2 display-5">
-                            <strong>Tech Adventures</strong>
-                        </h5>
-                        <p class="mbr-text mbr-fonts-style mb-3 display-7">Embark on exciting programming challenges and unleash your creativity!</p>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-lg-4">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="assets/images/photo-1563968743333-044cef800494.jpeg" alt="Mobirise Website Builder" title="" data-slide-to="1" data-bs-slide-to="1">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style mb-2 mt-0 display-5">
-                            <strong>Electro-Build</strong>
-                        </h5>
-                        <p class="mbr-text mbr-fonts-style mb-3 display-7">Get hands-on with circuits and build your own robotic creations!</p>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-lg-4">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="assets/images/photo-1527612820672-5b56351f7346.jpeg" alt="Mobirise Website Builder" title="" data-slide-to="2" data-bs-slide-to="2">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style mb-2 mt-0 display-5">
-                            <strong>STEM Galore</strong>
-                        </h5>
-                        <p class="mbr-text mbr-fonts-style mb-3 display-7">Dive into the world of science, technology, engineering, and math wonders!</p>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="people03 cid-ubkUClR0kp" id="team-1-ubkUClR0kp">
-    
-    
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 content-head">
-                <div class="mbr-section-head mb-5">
-                    <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                        <strong>Meet The Geniuses</strong>
-                    </h4>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="item features-image col-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="assets/images/photo-1522091066250-66518628904322.jpg" alt="Mobirise Website Builder" title="test one ">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style display-5">
-                            <strong>HM</strong>
-                        </h5>
-                        <h6 class="item-subtitle mbr-fonts-style mb-3 display-7">STEM Enthusiast</h6>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            <!--
-            <div class="item features-image col-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="assets/images/photo-1636624498233-0c3c5ab4186e.jpeg" alt="Mobirise Website Builder" title="">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style display-5">
-                            <strong>Luna</strong>
-                        </h5>
-                        <h6 class="item-subtitle mbr-fonts-style mb-3 display-7">Tech Wizard</h6>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="assets/images/photo-1492288991661-058aa541ff43.jpeg" alt="Mobirise Website Builder" title="">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style display-5">
-                            <strong>Leo</strong>
-                        </h5>
-                        <h6 class="item-subtitle mbr-fonts-style mb-3 display-7">Electronics Guru</h6>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                       <img src="assets/images/photo-1676385901160-31e1b9e1c0c7.jpeg" alt="Mobirise Website Builder" title="" data-slide-to="3" data-bs-slide-to="3">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style display-5">
-                            <strong>Zara</strong>
-                        </h5>
-                        <h6 class="item-subtitle mbr-fonts-style mb-3 display-7">Robotics Master</h6>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            -->
-        </div>
-    </div>
-</section>
-<!--
-<section data-bs-version="5.1" class="social4 cid-ubkUClRMbr" id="follow-us-1-ubkUClRMbr">
-    
-    
-    
-
-    <div class="container">
-        <div class="media-container-row">
-            <div class="col-12">
-                <h3 class="mbr-section-title align-center mb-5 mbr-fonts-style display-2">
-                    <strong>Stay Connected with Robotics Club</strong>
-                </h3>
-                <div class="social-list align-center">
-                    <a class="iconfont-wrapper bg-facebook m-2 " target="_blank" href="https://mobiri.se">
-                        <span class="socicon-facebook socicon"></span>
-                    </a>
-                    <a class="iconfont-wrapper bg-twitter m-2" href="https://mobiri.se" target="_blank">
-                        <span class="socicon-twitter socicon"></span>
-                    </a>
-                    <a class="iconfont-wrapper bg-instagram m-2" href="https://mobiri.se" target="_blank">
-                        <span class="socicon-instagram socicon"></span>
-                    </a>
-                    
-                    
-                    
-                    
-                    
-                    <a class="iconfont-wrapper bg-tiktok m-2" href="https://mobiri.se" target="_blank">
-                        <span class="socicon-tiktok socicon"></span>
-                    </a>
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="clients04 cid-ubkUClSy0d" id="sponsors-1-ubkUClSy0d">
-    
-    
-    <div class="container-fluid">
-        <div class="row justify-content-center mb-5">
-            <div class="col-12 content-head">
-                <div class="mbr-section-head">
-                    <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                        <strong>Awesome Sponsors</strong>
-                    </h4>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2 active">
-                <div class="item-wrapper">
-                    <div class="">
-                        <img src="assets/images/photo-1651853082689-706323a31427.jpeg" alt="Mobirise Website Builder" title="" data-slide-to="1" data-bs-slide-to="1">
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
-                <div class="item-wrapper">
-                    <div class="">
-                        <img src="assets/images/photo-1646825461394-ebd1800141d1.jpeg" alt="Mobirise Website Builder" title="" data-slide-to="2" data-bs-slide-to="2">
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
-                <div class="item-wrapper">
-                    <div class="">
-                        <img src="assets/images/photo-1554463529-e27854014799.jpeg" alt="Mobirise Website Builder" title="" data-slide-to="3" data-bs-slide-to="3">
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
-                <div class="item-wrapper">
-                    <div class="">
-                        <img src="assets/images/photo-1681415851723-dca11d0ec9a6.jpeg" alt="Mobirise Website Builder" title="" data-slide-to="4" data-bs-slide-to="4">
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
-                <div class="item-wrapper">
-                    <div class="">
-                        <img src="assets/images/photo-1502828331539-51c709e80300.jpeg" alt="Mobirise Website Builder" title="" data-slide-to="5" data-bs-slide-to="5">
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
-                <div class="item-wrapper">
-                    <div class="">
-                        <img src="assets/images/photo-1651044450619-5ce74d316987.jpeg" alt="Mobirise Website Builder" title="" data-slide-to="6" data-bs-slide-to="6">
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!--   
-<section data-bs-version="5.1" class="form5 cid-ubkUClSeIy" id="contact-form-3-ubkUClSeIy">
-    
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 content-head">
-                <div class="mbr-section-head mb-5">
-                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                        <strong>Get in Touch</strong>
-                    </h3>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="NwvWagbEIxsN1RKWfOG159gD+LeRNM8QAqmKBls60d/cc6AzkIOba93TKs7N0+uOO6oRgqTeo9eO4xPk9ufHy1MZU6IA+nq9cvmtmptU9xVewvzmLktk9Idm6weoL2O6">
-                    <div class="row">
-                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
-                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                            Oops...! some problem!
+        const portfolioContainer = document.getElementById('portfolioContainer');
+        function renderPortfolio() {
+            let html = '';
+            projects.forEach(p => {
+                html += `
+                    <div class="portfolio-card">
+                        <div class="portfolio-header">
+                            <div class="portfolio-title">${p.title}</div>
+                            <div class="portfolio-role">${p.role}</div>
+                            <div class="portfolio-client">🏭 ${p.client}</div>
+                        </div>
+                        <div class="portfolio-body">
+                            <ul class="achievement-list">
+                                <li>${p.achievements[0]}</li>
+                                <li>${p.achievements[1]}</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="dragArea row">
-                        <div class="col-md col-sm-12 form-group mb-3" data-for="name">
-                            <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value="" id="name-contact-form-3-ubkUClSeIy">
-                        </div>
-                        <div class="col-md col-sm-12 form-group mb-3" data-for="email">
-                            <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control" value="" id="email-contact-form-3-ubkUClSeIy">
-                        </div>
-                        <div class="col-12 form-group mb-3 mb-3" data-for="url">
-                            <input type="url" name="url" placeholder="Phone" data-form-field="url" class="form-control" value="" id="url-contact-form-3-ubkUClSeIy">
-                        </div>
-                        <div class="col-12 form-group mb-3" data-for="textarea">
-                            <textarea name="textarea" placeholder="Message" data-form-field="textarea" class="form-control" id="textarea-contact-form-3-ubkUClSeIy"></textarea>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
-                            <button type="submit" class="btn btn-primary display-7">Send Message</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
--->
-
-<section data-bs-version="5.1" class="contacts4 map1 cid-ubkUClSfYx" id="contacts-3-ubkUClSfYx">
-
-	
-
-    <div class="main_wrapper">
-		<div class="b_wrapper">
-			<div class="container-fluid">
-				<div class="row justify-content-start">
-					<div class="col-md-5 col-lg-4 item-wrapper">
-                        <h5 class="cardTitle mbr-fonts-style mb-2 display-5">
-                            <strong>Contact Us</strong>
-                        </h5>
-                        <ul class="list mbr-fonts-style display-7">
-                            <li class="mbr-text item-wrap">
-                            Phone:                                
-                            <a href="tel:+61 (0) 468474108="text-black"> +61 (0) 468 474 108</a></li>
-
-                            <li class="mbr-text item-wrap">WhatsApp: 
-                            <a href="tel:+61 (0) 468474108" class="text-black"> +61 (0) 468 474 108</a></li> 
-
-                            <li class="mbr-text item-wrap">                            
-                            Email:
-                            <a href="mailto:younginnovatorsau@gmail.com" class="text-black">younginnovatorsau@gmail.com</a>                        
-                            </li>
-
-                            <li class="mbr-text item-wrap">                        
-                            Address:
-                            Melbourne Australia / Online
-                            </li>
-
-                            <li class="mbr-text item-wrap">
-                            <p> Available Slots: </p>
-                            <p> Mon-Fri: 4pm-6pm </p>
-                            <p> Sat-Sun: 10am-4pm </p>
-                            </li>
-                        </ul>
-					</div>
-				</div>
-			</div>
-		</div>
-        <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196.688567549345!2d145.12927925216331!3d-37.93003141192815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66b2ed7a769f1%3A0x69f5b0a071e960fc!2s1430%20Centre%20Rd%2C%20Clayton%20South%20VIC%203169!5e0!3m2!1sen!2sau!4v1714451773430!5m2!1sen!2sau" allowfullscreen=""></iframe></div>
-	</div>
-</section>
-
-<section data-bs-version="5.1" class="footer3 cid-ubkUClTQ7N" once="footers" id="footer-6-ubkUClTQ7N">
-
+                `;
+            });
+            portfolioContainer.innerHTML = html;
+        }
+        renderPortfolio();
         
-<!--
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d330.7891882482628!2d145.1290244674745!3d-37.930083530852016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1714457534834!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196.688567549345!2d145.12927925216331!3d-37.93003141192815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66b2ed7a769f1%3A0x69f5b0a071e960fc!2s1430%20Centre%20Rd%2C%20Clayton%20South%20VIC%203169!5e0!3m2!1sen!2sau!4v1714451773430!5m2!1sen!2sau" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196.688567549345!2d145.12927925216331!3d-37.93003141192815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66b2ed7a769f1%3A0x69f5b0a071e960fc!2s1430%20Centre%20Rd%2C%20Clayton%20South%20VIC%203169!5e0!3m2!1sen!2sau!4v1714451773430!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196.688567549345!2d145.12927925216331!3d-37.93003141192815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66b2ed7a769f1%3A0x69f5b0a071e960fc!2s1430%20Centre%20Rd%2C%20Clayton%20South%20VIC%203169!5e0!3m2!1sen!2sau!4v1714451773430!5m2!1sen!2sau" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
--->
+        // EmailJS with simple confirmation
+        // EmailJS with direct sendForm integration
+(function() { 
+    emailjs.init("MKyv_-x2VVptjla5G"); 
+})();
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
     
-
-    <div class="container">
-        <div class="row">
-            <!--<div class="row-links">
-                <ul class="header-menu">
-                  
-                  
-                  
-                  
-                <li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="#" class="text-white">Home</a>
-                  </li><li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="#" class="text-white">About</a>
-                  </li><li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="#" class="text-white">Events</a>
-                  </li><li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="#" class="text-white">Join</a>
-                  </li></ul>
-              </div> -->
-
-            
-            <div class="col-12 mt-4">
-                <p class="mbr-fonts-style copyright display-7">© 2025 Robotics Club. All Rights Reserved.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-  <script src="assets/web/assets/jquery/jquery.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="assets/ytplayer/index.js"></script>
-  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
-  <script src="assets/vimeoplayer/player.js"></script>
-  <script src="assets/scrollgallery/scroll-gallery.js"></script>
-  <script src="assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>
-  <script src="assets/theme/js/script.js"></script>
-  <script src="assets/formoid/formoid.min.js"></script>
-  
-  
-  
+    const name = document.getElementById('from_name').value.trim();
+    const email = document.getElementById('user_email').value.trim();
+    const subj = document.getElementById('subject').value.trim();
+    const msg = document.getElementById('message').value.trim();
+    
+    if(!name || !email || !subj || !msg) {
+        document.getElementById('formStatus').innerHTML = `<div class="alert-message alert-error">Please fill in all fields.</div>`;
+        return;
+    }
+    
+    const sendBtn = document.getElementById('sendBtn');
+    sendBtn.disabled = true;
+    sendBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Sending...';
+    
+    emailjs.sendForm("service_a9imam4", "template_du6v7pt", this)
+        .then(function(response) {
+            document.getElementById('formStatus').innerHTML = `<div class="alert-message alert-success">✓ Thanks ${name}, your message has been sent. I'll get back to you soon. Meanwhile let's connect on LinkedIn!</div>`;
+            document.getElementById("contactForm").reset();
+            sendBtn.disabled = false;
+            sendBtn.innerHTML = 'Send message <i class="fas fa-paper-plane"></i>';
+            setTimeout(() => {
+                document.getElementById('formStatus').innerHTML = '';
+            }, 6000);
+        }, function(error) {
+            console.error('EmailJS error:', error);
+            document.getElementById('formStatus').innerHTML = `<div class="alert-message alert-error">❌ Something went wrong. Please try again or email me directly.</div>`;
+            sendBtn.disabled = false;
+            sendBtn.innerHTML = 'Send message <i class="fas fa-paper-plane"></i>';
+        });
+});
+    </script>
 </body>
 </html>
